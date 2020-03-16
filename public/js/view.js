@@ -74,3 +74,12 @@ $(document).ready(function() {
       updateBurger(updatedBurger);
     }
   }
+
+  // This function updates a burger in our database
+  function updateBurger(burger) {
+    $.ajax({
+      method: "PUT",
+      url: "/api/burgers",
+      data: burger
+    }).then(getBurgers);
+  }
