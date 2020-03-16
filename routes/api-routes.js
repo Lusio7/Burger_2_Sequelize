@@ -66,3 +66,20 @@ module.exports = function(app) {
       res.json(dbBurger);
     });
 
+});
+
+// PUT route for updating burgers
+app.put("/api/burgers", function(req, res) {
+  // Add code here to update a burger using the values in req.body, where the id is equal to
+  // req.body.id and return the result to the user using res.json
+  db.Burger.update(req.body,
+    {
+    where: {
+      id: req.body.id
+    }
+
+  }).then(function(dbBurger){
+    res.json(dbBurger);
+  });
+});
+};
