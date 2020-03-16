@@ -53,4 +53,16 @@ module.exports = function(app) {
     });
   });
 
-  
+  // DELETE route for deleting burgers
+  app.delete("/api/burgers/:id", function(req, res) {
+    // Add sequelize code to delete a burger where the id is equal to req.params.id, 
+    // then return the result to the user using res.json
+    db.Burger.destroy({
+      where: {
+        id: req.params.id
+      }
+
+    }).then(function(dbBurger){
+      res.json(dbBurger);
+    });
+
