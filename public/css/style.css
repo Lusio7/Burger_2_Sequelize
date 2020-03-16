@@ -5,4 +5,13 @@ body {
     background-size: cover;
   }
 
-  
+  .jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #fafafa75;
+    border-radius: 0.3rem
+  }
+
+  .jumbotron > h1 {
+    font-family: 'Creepster', cursive;
+    color: #931e29
