@@ -35,3 +35,13 @@ $(document).ready(function() {
       initializeRows();
     });
   }
+
+   // This function deletes a burger when the user clicks the delete button
+   function deleteBurger(event) {
+    event.stopPropagation();
+    var id = $(this).data("id");
+    $.ajax({
+      method: "DELETE",
+      url: "/api/burgers/" + id
+    }).then(getBurgers);
+  }
