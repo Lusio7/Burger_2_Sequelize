@@ -45,3 +45,12 @@ $(document).ready(function() {
       url: "/api/burgers/" + id
     }).then(getBurgers);
   }
+
+  // This function handles showing the input box for a user to edit a burger
+  function editBurger() {
+    var currentBurger = $(this).data("burger");
+    $(this).children().hide();
+    $(this).children("input.edit").val(currentBurger.text);
+    $(this).children("input.edit").show();
+    $(this).children("input.edit").focus();
+  }
