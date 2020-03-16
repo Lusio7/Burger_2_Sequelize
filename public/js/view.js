@@ -11,4 +11,21 @@ $(document).ready(function() {
     $(document).on("blur", ".burger-item", cancelEdit);
     $(document).on("submit", "#burger-form", insertBurger);
 
-    
+    // Our initial burgers array
+  var burgers = [];
+
+  // Getting burgers from database when page loads
+  getBurgers();
+
+  // This function resets the burgers displayed with new burgers from the database
+  function initializeRows() {
+    $burgerContainer.empty();
+    var rowsToAdd = [];
+    for (var i = 0; i < burgers.length; i++) {
+      console.log(burgers[i])
+      rowsToAdd.push(createNewRow(burgers[i]));
+    }
+    $burgerContainer.prepend(rowsToAdd);
+  }
+
+  
