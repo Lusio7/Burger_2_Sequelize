@@ -96,4 +96,19 @@ $(document).ready(function() {
     }
   }
 
-  
+   // This function constructs a burger-item row
+   function createNewRow(burger) {
+    var $newInputRow = $(
+      [
+        "<li class='list-group-item burger-item'>",
+        "<span>",
+        burger.text,
+        "</span>",
+        "<input type='text' class='edit' style='display: none;'>",
+        "<button class='delete btn btn-danger'>x</button>",
+        "<button class='complete btn btn-primary'>✓</button>",
+        "</li>"
+      ].join("")
+    );
+
+    
