@@ -111,4 +111,24 @@ $(document).ready(function() {
       ].join("")
     );
 
-    
+    $newInputRow.find("button.delete").data("id", burger.id);
+    $newInputRow.find("input.edit").css("display", "none");
+    $newInputRow.data("burger", burger);
+    if (burger.complete) {
+      $newInputRow.find("span").css("text-decoration", "line-through");
+    }
+    return $newInputRow;
+  }
+
+   // This function inserts a new burger into our database and then updates the view
+   function insertBurger(event) {
+    event.preventDefault();
+    var burger = {
+      text: $newItemInput.val().trim(),
+      complete: false
+    };
+    console.log(burger);
+    $.post("/api/burgers", burger, getBurgers);
+    $newItemInput.val("");
+  }
+});
