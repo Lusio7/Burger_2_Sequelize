@@ -1,30 +1,27 @@
 {
-    "name": "Burger-2",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js"
-    },
-
-    "repository": {
-        "type": "git",
-        "url": "git+ https://github.com/Lusio7/Burger_2_Sequelize"
-      },
-
-      "keywords": [],
-      "author": "Lusio",
-      "license": "",
-      "bugs": {
-        "url": "https://github.com/Lusio7/Burger_2_Sequelize"
-      },
-
-      "homepage": "https://github.com/Lusio7?tab=repositories",
-      "dependencies": {
-        "dotenv": "^8.0.0",
-        "express": "^4.17.1",
-        "mysql2": "^1.6.5",
-        "sequelize": "^5.8.5"
-      }
-    }
+  "name": "Burger-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ https://github.com/Lusio7/Burger_2_Sequelize"
+  },
+  "keywords": [],
+  "author": "Lusio",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/Lusio7/Burger_2_Sequelize"
+  },
+  "homepage": "https://github.com/Lusio7?tab=repositories",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.5"
+  }
+}
