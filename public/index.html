@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Burgers-2</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/lumen/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" media="screen" title="no title">
+  <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <link rel="stylesheet" href="">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 id="color-overs">Eat-Da-Burger!</h1>
+      <p id="color-override">Home of da world famous Juicy Lucy Burgers</p>
+      <br>
+      <h2 id="color-override">Place An Order</h2>
+      <panel>
+        <form id="burger-form" class="create-form">
+          <div class="form-group">
+            <label for="newburger" id="color-override">Burger's Name:</label>
+            <input type="text" id="name-input" class="new-item form-control" placeholder="Add a Burger" name="burger">
+            
+            <button type="submit" class="btn btn-success" id="addburger"><span class="fa fa-thumbs-up"></span></button>
+          </div>
+        </form>
+      </panel>
+    </div><!-- /jumbotron -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <ul class="list-group burger-list">
+            <li class="list-group-item new-item">
+              
+            </li>
+            <span class="burger-container">
+            </span>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Custom Script -->
+    <script src="js/view.js" type="text/javascript"></script>
+
+</body>
+
+</html>
