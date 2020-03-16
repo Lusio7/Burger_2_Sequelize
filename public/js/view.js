@@ -83,3 +83,17 @@ $(document).ready(function() {
       data: burger
     }).then(getBurgers);
   }
+
+   // This function is called whenever a burger item is in edit mode and loses focus
+  // This cancels any edits being made
+  function cancelEdit() {
+    var currentBurger = $(this).data("burger");
+    if (currentBurger) {
+      $(this).children().hide();
+      $(this).children("input.edit").val(currentBurger.text);
+      $(this).children("span").show();
+      $(this).children("button").show();
+    }
+  }
+
+  
