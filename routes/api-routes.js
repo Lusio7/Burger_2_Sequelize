@@ -26,4 +26,18 @@ module.exports = function(app) {
     });
   });
 
+   // Get route for retrieving a single burger
+   app.get("/api/burgers/:id", function(req, res) {
+    // Add sequelize code to find a single burger where the id is equal to req.params.id,
+    // return the result to the user with res.json'
+    db.Burger.find({
+      where: {
+        id: req.params.id
+      }
+
+    }).then(function(dbBurger){
+      res.json(dbBurger);
+    });
+  });
+
   
