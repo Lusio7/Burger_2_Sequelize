@@ -62,3 +62,15 @@ $(document).ready(function() {
     burger.complete = !burger.complete;
     updateBurger(burger);
   }
+
+
+  // This function starts updating a burger in the database if a user hits the "Enter Key"
+  // While in edit mode
+  function finishEdit(event) {
+    var updatedBurger = $(this).data("burger");
+    if (event.which === 13) {
+      updatedBurger.text = $(this).children("input").val().trim();
+      $(this).blur();
+      updateBurger(updatedBurger);
+    }
+  }
