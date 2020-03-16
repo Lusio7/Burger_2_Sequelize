@@ -40,4 +40,17 @@ module.exports = function(app) {
     });
   });
 
+   // POST route for saving a new burger
+   app.post("/api/burgers", function(req, res) {
+    // Add sequelize code for creating a burger using req.body,
+    // then return the result using res.json
+    db.Burger.create({
+      text: req.body.text,
+      body: req.body.body,
+      complete : req.body.complete
+    }).then(function(dbBurger){
+      res.json(dbBurger);
+    });
+  });
+
   
