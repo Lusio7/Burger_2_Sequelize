@@ -28,4 +28,10 @@ $(document).ready(function() {
     $burgerContainer.prepend(rowsToAdd);
   }
 
-  
+   // This function grabs burgers from the database and updates the view
+   function getBurgers() {
+    $.get("/api/burgers", function(data) {
+      burgers = data;
+      initializeRows();
+    });
+  }
