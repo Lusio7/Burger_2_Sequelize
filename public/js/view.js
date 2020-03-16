@@ -54,3 +54,11 @@ $(document).ready(function() {
     $(this).children("input.edit").show();
     $(this).children("input.edit").focus();
   }
+
+   // Toggles complete status
+   function toggleComplete(event) {
+    event.stopPropagation();
+    var burger = $(this).parent().data("burger");
+    burger.complete = !burger.complete;
+    updateBurger(burger);
+  }
