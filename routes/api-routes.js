@@ -12,4 +12,18 @@ module.exports = function(app) {
     });
   });
 
+   // Get route for returning burgers of a specific complete
+   app.get("/api/burgers/complete/:complete", function(req, res) {
+    // Add sequelize code to find all burgers where the complete is equal to req.params.complete,
+    // return the result to the user with res.json
+    db.Burger.findAll({
+      where: {
+        complete: req.params.complete
+      }
+
+    }).then(function(dbBurger){
+      res.json(dbBurger);
+    });
+  });
+
   
